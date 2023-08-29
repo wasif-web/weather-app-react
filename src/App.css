@@ -1,0 +1,120 @@
+/* WeatherApp.css */
+/* Reset default styling */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Main container for the app */
+.weather-app {
+  position: relative;
+/* Background image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark overlay */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.weather-app h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: slide-up 5s forwards;
+}
+
+.weather-app .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Add some space between input and button */
+  margin-top: 20px;
+}
+
+.weather-app input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.weather-app button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00aaff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.weather-app button:hover {
+  background-color: #0077cc;
+}
+
+.weather-info {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  animation: fade-in 1s forwards;
+}
+
+.weather-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.weather-info p {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center; /* Center the icon vertically */
+  justify-content: center; /* Center the text and icon horizontally */
+}
+
+.weather-info i {
+  margin-left: 10px; /* Add space between text and icon */
+}
+
+.error {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
