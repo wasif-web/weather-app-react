@@ -37,7 +37,7 @@ const WeatherApp = () => {
   };
 
   const getWeatherIcon = (weatherMain) => {
-    // Your icon mapping logic here
+    
   };
 
   return (
